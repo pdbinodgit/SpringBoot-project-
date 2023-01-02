@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<center>
+<div class="container my-5 md-6">
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Place</th>
+      <th scope="col">Update</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="b:${show}">
+      <td th:text="${b.id}"></td>
+      <td th:text="${b.name}"></td>
+      <td th:text="${b.place}"></td>
+     <!-- <td><a class="btn-btn-secondary btn-sm" th:href="@{/show/{id}(id=${b.id})}">update</a></td> -->
+
+
+    </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</center>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+    <meta charset="UTF-8">
+    <title>Add</title>
+</head>
+<body>
+<center>
+<center><h1>Add</h1></center>
+<form class="col-md-4 offset-md-4" th:action="@{/add}" method="post">
+  <div class="mb-3">
+    <label for="name" class="form-label"><b>NAME</b></label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <br><br>
+  <div class="mb-3">
+    <label for="place" class="form-label"><b>PLACE</b></label>
+    <input type="text" class="form-control" id="place" name="place">
+  </div>
+<br><br>
+  <center> <button type="submit" class="btn btn-primary">Submit</button></center>
+
+</form>
+  </center>
+</body>
+</html>
